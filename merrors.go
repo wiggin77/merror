@@ -66,6 +66,15 @@ func (me *MError) SetFormatter(f FormatterFunc) (old FormatterFunc) {
 	return
 }
 
+// ErrorOrNil returns nil if this `MError` contains no errors,
+// otherwise this `MError` is returned.
+func (me *MError) ErrorOrNil() error {
+	if me == nil || len(me.errors) == 0 {
+		return nil
+	}
+	return me
+}
+
 // Error returns a string representation of this MError.
 // The output format depends on the `Formatter` set for this
 // merror instance, or the global formatter if none set.
