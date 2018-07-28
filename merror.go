@@ -1,4 +1,4 @@
-package merrors
+package merror
 
 // MError represents zero or more errors that can be
 // accumulated via the `Append` method.
