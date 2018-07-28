@@ -1,2 +1,2 @@
-# config
-Golang package for app configuration.
+# merrors
+Error aggregator for Golang.
