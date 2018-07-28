@@ -1,2 +1,2 @@
 # merror
-Error aggregator for Golang.
+Multiple Error aggregator for Golang.
