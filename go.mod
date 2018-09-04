@@ -1,1 +1,1 @@
-module githib.com/wiggin77/merror
+module github.com/wiggin77/merror
