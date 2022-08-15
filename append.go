@@ -1,6 +1,6 @@
 package merror
 
-// Append appends an error to a multi-error.
+// Append an error to a multi-error.
 // If `to` is `nil` it will just assign `err`.
 // If `to` is not a `*MError` it will create a new `*MError` and append both errors.
 // If `err` is `nil` it will just return `to`.
