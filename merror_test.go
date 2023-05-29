@@ -34,6 +34,17 @@ func TestRace(t *testing.T) {
 	assert.Equal(t, NumThreads*NumErrors, len(merr.Errors()))
 }
 
+func TestCapacity(t *testing.T) {
+	merr := NewWithCap(10)
+
+	for i := 0; i < 15; i++ {
+		merr.Append(errors.New(fmt.Sprintf("error %d", i)))
+	}
+
+	assert.Equal(t, 10, merr.Len())
+	assert.Equal(t, 5, merr.Overflow())
+}
+
 func TestIs(t *testing.T) {
 	err1 := ErrOne{"err1"}
 	err2 := &ErrTwo{"err2"}
